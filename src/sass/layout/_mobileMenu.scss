@@ -1,0 +1,81 @@
+.mobile-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 320px;
+  width: 100%;
+  padding: 104px 20px 20px 20px;
+  background: var(--radial-gradient);
+  transform: translateX(-200%);
+  transition: transform var(--cubic-time);
+  overflow: hidden;
+  z-index: 1;
+
+  &.is-open {
+    transform: translateY(0px);
+    transition: transform var(--cubic-time);
+  }
+
+  &__btn-signUp {
+    display: flex;
+  }
+
+  &__btns {
+    // margin-top: 126px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -150%);
+  }
+  &__btn {
+    min-width: 72px;
+    display: inline-block;
+    font-weight: 500;
+
+    color: var(--white-cl);
+    fill: var(--white-cl);
+
+    transition: background-color 250ms;
+
+    &:hover,
+    &:focus {
+      color: var(--black-cl);
+      fill: var(--black-cl);
+      background-color: var(--accent-cl);
+
+      //   border-color: $brandColor;
+    }
+  }
+  &__btn-home {
+    margin-left: 16px;
+    margin-bottom: 8px;
+  }
+  &__btn-shoppingList {
+    max-width: 151px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__bgImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 450px;
+    height: 439px;
+
+    transform: translate(-50%, 30%) rotate(-15deg);
+
+    background-image: url(/src/images/mob13@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/mob13@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
